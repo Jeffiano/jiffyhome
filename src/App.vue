@@ -2,21 +2,21 @@
   <v-app>
   <v-content>
       <section>
-        <v-parallax :src="require('@/assets/logo.png')" height="600">
+        <v-parallax :src="require('@/assets/plane.jpg')" height="600">
           <v-layout
             column
             align-center
             justify-center
             class="white--text"
           >
-            <img :src="require('@/assets/logo.png')" alt="Vuetify.js" height="200">
-            <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
-            <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
+            <img :src="require('@/assets/china_life_logo.png')"  height="200">
+            <h1 class="white--text mb-2 display-1 text-xs-center" style="margin-top: 20px">高级寿险规划师</h1>
+            <div class="subheading mb-3 text-xs-center " >徐莉</div>
             <v-btn
               class="blue lighten-2 mt-5"
               dark
               large
-              href="/pre-made-themes"
+              @click = "showAlert"
             >
               了解更多
             </v-btn>
@@ -52,6 +52,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+  methods:{
+    showAlert:function(){
+      alert("想多了，啥都没有！")
     }
   }
 }
