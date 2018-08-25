@@ -18,7 +18,7 @@
               large
               href="/pre-made-themes"
             >
-              Get Started
+              了解更多
             </v-btn>
           </v-layout>
         </v-parallax>
