@@ -7,6 +7,8 @@ import VueResource from 'vue-resource'
 
 import HelloWorld from './components/HelloWorld'
 import Home from './components/Home'
+import Jiffy from './components/Jiffy'
+import Lily from './components/Lily'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -15,7 +17,9 @@ Vue.use(VueResource)
 const router = new VueRouter({
 	routes:[
 	{path:"/",component:Home},
-	{path:"/helloworld",component:HelloWorld}
+	{path:"/helloworld",component:HelloWorld},
+	{path:"/jiffy",component:Jiffy},
+	{path:"/lily",component:Lily},
 	],
 	mode:"history"
 })

@@ -1,10 +1,7 @@
 <template>
   <v-app>
-  <!-- <Home></Home> -->
-  <!-- <Lily></Lily> -->
-  <Jiffy></Jiffy>
-  <!-- <router-view></router-view> -->
-</v-app>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
