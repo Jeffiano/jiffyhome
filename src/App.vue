@@ -2,19 +2,22 @@
   <v-app>
   <!-- <Home></Home> -->
   <!-- <Lily></Lily> -->
-  <router-view></router-view>
+  <Jiffy></Jiffy>
+  <!-- <router-view></router-view> -->
 </v-app>
 </template>
 
 <script>
   import HelloWorld from './components/HelloWorld'
   import Home from './components/Home'
+  import Jiffy from './components/Jiffy'
 
   export default {
     name: 'App',
     components: {
       HelloWorld,
-      Home
+      Home,
+      Jiffy
     },
     data () {
       return {
