@@ -1,5 +1,4 @@
 <template>
-	<v-container fluid>
 		<v-content>
 			<section>
 				<v-parallax :src="require('@/assets/hero.jpeg')" height="600">
@@ -178,11 +177,6 @@
 	</v-layout>
 </v-footer>
 </v-content>
-
-
-
-
-</v-container>
 </template>
 
 <script>
