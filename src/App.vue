@@ -30,11 +30,6 @@
         rightDrawer: false,
         title: 'Lily'
       }
-    },
-    methods:{
-      showAlert:function(){
-        alert("想多了，啥都没有！")
-      }
     }
   }
 </script>
