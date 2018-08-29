@@ -33,7 +33,7 @@
       <v-btn icon> <v-icon>favorite</v-icon></v-btn>
     </v-toolbar-items>
   </v-toolbar>
-  <users v-bind:users="users"  class="mt-5"></users>
+  <users v-bind:users="users"  class="mt-5" @loadMore = "loadMore"></users>
   <v-btn
   fixed
   absolute
@@ -43,6 +43,7 @@
   right
   color="pink"
   class="mb-5"
+  floating
   @click = "loadMore"
   >
   <v-icon>add</v-icon>
