@@ -25,7 +25,7 @@
       </v-parallax>
     </section>
   </v-content> -->
-  <v-toolbar dark color="pink" flat fixed >
+  <v-toolbar dark color="pink" flat >
     <v-toolbar-title>Jiffy's Home</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
@@ -33,7 +33,7 @@
       <v-btn icon> <v-icon>favorite</v-icon></v-btn>
     </v-toolbar-items>
   </v-toolbar>
-  <users v-bind:users="users"  class="mt-5" @loadMore = "loadMore"></users>
+  <users v-bind:users="users"  class="mt-0" @loadMore = "loadMore"></users>
   <v-btn
   fixed
   absolute

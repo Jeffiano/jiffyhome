@@ -104,6 +104,15 @@ v-model="dialog"
         this.currentIndex --;
         console.log("currentIndex:" + currentIndex);
       }
+    },
+    created(){
+      let _this = this;
+      document.onkeydown = function(e){
+        let _key = window.event.keyCode;
+        if(_key === 86){
+          _this.nextImage();
+        }
+      }    
     }
   }
 </script>
