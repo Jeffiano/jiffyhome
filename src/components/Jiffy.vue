@@ -47,6 +47,7 @@
   >
   <v-icon>add</v-icon>
 </v-btn>
+<router-link to="lily">Lily</router-link>
 </div>
 </template>
 

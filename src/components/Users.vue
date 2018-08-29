@@ -16,7 +16,7 @@
         >
         <v-layout row wrap>
           <v-flex
-          v-for="(user,index) in users"
+          v-for="user in users"
           :key="user.url"
           v-if = "user.url"
           xs4
