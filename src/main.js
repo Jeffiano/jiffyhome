@@ -16,7 +16,7 @@ Vue.use(VueResource)
 
 const router = new VueRouter({
 	routes:[
-	{path:"/",component:Home},
+	{path:"/",component:Jiffy},
 	{path:"/helloworld",component:HelloWorld},
 	{path:"/jiffy",component:Jiffy},
 	{path:"/lily",component:Lily},

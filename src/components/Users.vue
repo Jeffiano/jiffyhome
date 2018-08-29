@@ -1,79 +1,82 @@
 <template>
-  <div class="users">
-   <v-card>
-    <v-container
-    fluid
-    grid-list-md
-    >
-    <v-layout row wrap>
-      <v-flex
-      v-for="card in cards"
-      v-bind="{ [`xs${card.flex}`]: true }"
-      :key="card.title"
-      >
-      <v-card>
-        <v-img
-        :src="card.src"
-        height="200px"
-        >
-        <v-container
-        fill-height
-        fluid
-        pa-2
-        >
-        <v-layout fill-height>
-          <v-flex xs12 align-end flexbox>
-            <span class="headline white--text" v-text="card.title"></span>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-img>
+    <!-- <ul>
+      <li v-for="user in users" :key='user'>
+       <v-img :src="user.thumbnail"></v-img> 
+      </li>
+    </ul>
+  -->
 
-    <v-card-actions>
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>favorite</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>bookmark</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>share</v-icon>
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-</v-flex>
-</v-layout>
+  <v-layout justify-center>
+    <v-flex xs12 sm10>
+      <v-card>
+        <v-container
+        fluid
+        grid-list-md
+        center
+        >
+        <v-layout row wrap>
+          <v-flex
+          v-for="(user,index) in users"
+          :key="user.url"
+          v-if = "user.url"
+          xs4
+          >
+          <v-card >
+            <v-img
+            v-bind:src="user.url"
+            height="300px"
+            v-on:error="user.url = null"
+            > 
+            <v-container
+            fill-height
+            fluid
+            pa-2
+            >
+          </v-container>
+        </v-img>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn icon>
+            <v-icon>favorite</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>share</v-icon>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </v-container>
 </v-card>
-</div>
+</v-flex>
+</v-layout>
 </template>
 
 <script>
   export default {
     name: 'users',
-    data: () => ({
-      cards: [
-      { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 6 },
-      { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-      { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 }
-      ]
-    }),
-    methods:{
+    props:{
+      users:{
+        type:Array,
+        required:true
+      },
+    },
+    data () {
+      return {
 
+      }
+    },
+    methods:{
+      deleteUser:function(){
+        this.users.pop();
+      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.users{
-  width: 100%;
-  max-width:1200px;
-  margin:40px,auto;
-  padding:0 20px;
-  box-sizing:border-box;
-}
 ul{
   display:flex;
   flex-wrap:wrap;
