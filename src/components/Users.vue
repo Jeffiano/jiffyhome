@@ -119,20 +119,4 @@ v-model="dialog"
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul{
-  display:flex;
-  flex-wrap:wrap;
-  list-style-type:none;
-  padding:1;
-}
-li{
-  flex-grow :1;
-  flex-basis:200px;
-  text-align:center;
-  padding:30px;
-  border:1px solid #222;
-  margin:10px;
-}
-
-
 </style>

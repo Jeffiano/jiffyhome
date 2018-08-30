@@ -59,7 +59,7 @@
     name: 'jiffy',
     data(){
       return{
-        pageIndex:1,
+        pageIndex:Math.round(Math.random()*100+1),
         users:[]
       }
     },
